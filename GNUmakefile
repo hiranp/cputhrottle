@@ -1,5 +1,5 @@
 CC = /usr/bin/g++
-CCFLAGS = -g
+CCFLAGS =
 LDFLAGS =
 
 BOOST_VERSION = 1_43_0
