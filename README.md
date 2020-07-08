@@ -20,6 +20,11 @@ Source:
 
 [cputhrottle.tar.gz](http://www.willnolan.com/cputhrottle/cputhrottle.tar.gz)
 
+# To build on MacOS
+1. you need gcc and make. With Homebrew installed on my mac , the installation was as simple as running the command
+
+#] brew install make
+
 Binary:
 
 [cputhrottle.gz](http://www.willnolan.com/cputhrottle/cputhrottle.gz) (You **must** run `chmod +x cputhrottle` after running `gunzip cputhrottle.gz`, in order to make the program executable. Otherwise, it will not start correctly. Some folks have noted that gunzip says that the file is not in gzip format. In that case, try renaming the file to `cputhrottle` and running as-is. I confess I have no idea why this happens -- probably the browser or web server trying to be helpful but failing miserably.)
