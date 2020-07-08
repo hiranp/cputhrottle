@@ -20,11 +20,6 @@ Source:
 
 [cputhrottle.tar.gz](http://www.willnolan.com/cputhrottle/cputhrottle.tar.gz)
 
-# To build on MacOS
-1. you need gcc and make. With Homebrew installed on my mac , the installation was as simple as running the command
-
-#] brew install make
-
 Binary:
 
 [cputhrottle.gz](http://www.willnolan.com/cputhrottle/cputhrottle.gz) (You **must** run `chmod +x cputhrottle` after running `gunzip cputhrottle.gz`, in order to make the program executable. Otherwise, it will not start correctly. Some folks have noted that gunzip says that the file is not in gzip format. In that case, try renaming the file to `cputhrottle` and running as-is. I confess I have no idea why this happens -- probably the browser or web server trying to be helpful but failing miserably.)
@@ -32,3 +27,8 @@ Binary:
 _Note:_ Thanks to Nikolaj Schumacher for pointing out a race condition whereby a thread being sampled could have ceased to exist after having been enumerated as existing within the process. Specifically, he noticed this while throttling Handbrake, which creates/kills threads in rapid succession. I have applied his patch and the new sources and binary reflect his changes. I tested the fix and cputhrottle behaved as before (for my test case).
 
 Also thanks to Andreas Pamboris for noticing a bug where if the throttled process dropped to 0% CPU usage and then started using CPU again, cputhrottle stopped working. This was resulting in the "amount to throttle" getting permanently set to 0 -- a fix was put in and now this case is handled correctly.
+
+## To build on MacOS
+1. you need gcc and make. With Homebrew installed on my mac , the installation was as simple as running the command
+
+#] brew install make
