@@ -29,6 +29,6 @@ _Note:_ Thanks to Nikolaj Schumacher for pointing out a race condition whereby a
 Also thanks to Andreas Pamboris for noticing a bug where if the throttled process dropped to 0% CPU usage and then started using CPU again, cputhrottle stopped working. This was resulting in the "amount to throttle" getting permanently set to 0 -- a fix was put in and now this case is handled correctly.
 
 ## To build on MacOS
-1. you need gcc and make. With Homebrew installed on my mac , the installation was as simple as running the command
+You need gcc and make. With Homebrew installed on my mac , the installation was as simple as running the command
 
 #] brew install make
